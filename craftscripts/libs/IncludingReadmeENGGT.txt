@@ -18,6 +18,9 @@ of a plug-in library file.
 
 Special thanks to octylFractal for the provided method.
 
+P.S. The path to the plugin library files comes from the craftscrtips folder. If you put
+libraries to the craftscripts/libs folder, you must write the path "libs/lib1.js".
+
 
 ------------------------------------------
 
