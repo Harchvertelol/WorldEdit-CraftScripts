@@ -1,7 +1,3 @@
-Attention! ANY scripts require the Rhino script engine!
-
-You can read about installing it on the World Edit wiki.
-
 AdvancedOverlay / AdvancedReplace
 
 Work with any type of selection.
