@@ -1,0 +1,11 @@
+Skygridgen
+
+This is a test script that I will not add, since there is a plug-in for generating SkyGrid. He doesn’t even have help (i.e. //cs SkyGridGen /? Cannot be written, even though he offers a script).
+Format: //cs SkyGridGen <r1> <r2> <r3> <d1> <d2> <d3> [filemask]
+r%i% - the number of blocks in both directions along the corresponding axis
+d%i% - the distance between the blocks on the corresponding axis
+filemask - read generation mask from file
+Generation masks are located in the WorldEdit/SkyGridMask folder
+Their format is very simple: First, the block ID, then after a space the probability of occurrence (not necessarily from 1 to 100, any number, then everything will be summed up and the percentage will look).
+Two masks are supplied with the script as standard - the normal world (StandartMask, read by default if the file is not specified) and purely from the sand. They are located in the SkyGridMask folder. This folder must be put in the WorldEdit folder. Unfortunately, the sand will fall, because these are the features of WE.
+Most likely, the script will not be added.

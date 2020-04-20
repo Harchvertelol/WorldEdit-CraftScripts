@@ -1,0 +1,24 @@
+Attention! ANY scripts require the Rhino script engine!
+
+You can read about installing it on the World Edit wiki.
+
+AdvancedOverlay / AdvancedReplace
+
+Work with any type of selection.
+The functionality corresponds to the commands from WE (without Advanced), but there is an additional one, it is possible to do this with a certain percentage (like the set command in standard WE). Also, since the minecraft chat line is limited in number of characters, it is possible to read the “mask” percentage from the command block. To do this, place the command block inside the selection and write the following text into it:
+MASK:% mask%
+Where% mask% is our mask.
+Command format:
+//cs AdvancedReplace <block_id> <mask>
+//cs AdvancedOverlay <block_id> <mask>
+The mask is written standardly, as with the set command in WE.
+Command usage examples:
+Without a command block: //cs AdvancedReplace 35 50% 35: 1.20% 35: 3.30% 35: 4
+Or with a command block: //cs AdvancedReplace 35 /getmask
+The following is written in the command block inside the selection:
+MASK: 50% 35: 1.20% 35: 3.30% 35: 4
+With overlay, all commands are similar. These two scripts are almost identical. If your interest amount is less than 100, the balance will be supplemented by air. If more than 100, only that up to 100% will be taken into account.
+To read the help, write the following:
+//cs AdvancedReplace /?
+To find out about the author:
+//cs AdvancedReplace /author
