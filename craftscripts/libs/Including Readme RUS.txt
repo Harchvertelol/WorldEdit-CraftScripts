@@ -11,7 +11,12 @@ eval(source);
 черты для примера подключены две библиотеки lib1.js и lib2.js.
 Не забудьте их удалить из подключения!
 
+После этого ниже блока "End process" пишите свой код.
 
+При желании вы можете перехватить исключение Error(), которое кидается при отсутствии
+файла подключаемой библиотеки.
+
+Отдельное спасибо octylFractal за предоставленный метод.
 
 
 ------------------------------------------
@@ -26,10 +31,18 @@ importPackage(Packages.java.nio.file);
 
 function include(file)
 {
-	const worldEdit = WorldEdit.getInstance();
-	const path = worldEdit.getWorkingDirectoryFile(worldEdit.getConfiguration().scriptsDir).toPath().resolve(file);
-	const source = CharStreams.toString(Files.newBufferedReader(path)) + "";
-	return source;
+	try
+	{
+		const worldEdit = WorldEdit.getInstance();
+		const path = worldEdit.getWorkingDirectoryFile(worldEdit.getConfiguration().scriptsDir).toPath().resolve(file);
+		const source = CharStreams.toString(Files.newBufferedReader(path)) + "";
+		return source;
+	}
+	catch(nsfe)
+	{
+		player.print("This script requires a library \"" + file + "\".");
+		return "throw new Error(\"Library file not found (" + file + ")\");";
+	}
 }
 
 /***************/
@@ -40,10 +53,7 @@ function include(file)
 /*  Including library   */
 /************************/
 
-source = include("lib1.js");
-eval(source);
-
-source = include("lib2.js");
+source = include("Advertisting.js");
 eval(source);
 
 /***************/
