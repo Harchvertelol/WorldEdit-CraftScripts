@@ -1,5 +1,14 @@
 This is a small library for inserting your ad into your script.
 
+Installation:
+
+Copy text from Advertisting.js file to any place of your script file after necessary import (outside functions).
+
+Insert the following lines at the beginning of the script:
+
+importPackage(Packages.java.util);
+importPackage(Packages.java.io);
+
 How to use:
 
 Created an object for the library.
