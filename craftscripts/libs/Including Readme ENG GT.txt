@@ -1,15 +1,15 @@
 Installation of any library minecraft version higher than 1.6.2 is as follows:
 
 1) Copy all the text below the line into your script.
-2) In the section "Including library" insert on each connected
+2) In the section "Including library" insert on each included
 library the following code:
 
 source = include("lib1.js");
 eval(source);
 
 Here lib1.js is the name of the plugin library. In the code below
-for example, two libraries lib1.js and lib2.js. are connected
-Do not forget to remove them from the connection!
+for example, two libraries lib1.js and lib2.js are included.
+Do not forget to remove them from the including!
 
 
 
